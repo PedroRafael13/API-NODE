@@ -1,13 +1,18 @@
 import express from "express";
 
 const App = express()
+const users = []
 
 App.get("/", (req, res) => {
-  res.send("Hello word")
+  users.get()
+
+  req.status(200).json(users)
 })
 
 App.post("/postages", (req, res) => {
-  res.send("criando a routa tipo post")
+  users.post(req.body)
+
+  res.status(201).json({ message: "Deu certo! Usario Criado" })
 })
 
 // TODO : TREINANDO CONCEITO DE ROTAS NO NODE.JS
