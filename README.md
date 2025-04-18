@@ -1,5 +1,4 @@
-<h1>API de teste !</h1>
+<h1>API Google Gimini</h1>
 
-<p>Esse projeto, tem como seu objetivo, o treinamento de desenvolvimento de api com node.js</p>
+<p>Fazendo primeiras request da api do gimini</p>
 
-<h1>oii,eitaa</h1>
