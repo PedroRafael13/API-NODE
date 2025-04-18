@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,8 @@
   "license": "ISC",
   "description": "Project for study of nodeJs",
   "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   }
 }

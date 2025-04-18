@@ -1,23 +1,15 @@
-import express from "express";
+import express from "express"
+import generateContent from "./generateContent"
 
 const App = express()
-const users = []
+App.use(express.json())
 
 App.get("/", (req, res) => {
-  users.get()
-
-  req.status(200).json(users)
+  res.send("Hello World")
 })
 
-App.post("/postages", (req, res) => {
-  users.post(req.body)
+App.get("/gemini", generateContent)
 
-  res.status(201).json({ message: "Deu certo! Usario Criado" })
+App.listen(3000, () => {
+  console.log("The port at runneing 300")
 })
-
-// TODO : TREINANDO CONCEITO DE ROTAS NO NODE.JS
-App.get("/infor", (req, res) => {
-  res.send("somente pessoas autorizada podem entrar")
-})
-
-App.listen(3000, console.log("The server is runnering at port 3000"))
