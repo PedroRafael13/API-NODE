@@ -1,5 +1,6 @@
-const express = require("express")
-const generateContent = require("./gemini.js")
+
+import express from "express"
+import { generateContent } from "./gemini.js"
 
 const App = express()
 App.use(express.json())

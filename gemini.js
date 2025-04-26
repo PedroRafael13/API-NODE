@@ -1,10 +1,12 @@
-const dotenv = require("dotenv").config()
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+import dotenv from "dotenv"
+import { GoogleGenerativeAI } from "@google/generative-ai"
+
+dotenv.config()
 
 const genIA = new GoogleGenerativeAI(process.env.API_KEY)
 const model = genIA.getGenerativeModel({ model: "gemini-1.5-fhash" })
 
-const generateContent = async (req, res) => {
+export const generateContent = async (req, res) => {
   try {
     const prompt = "Create 5 funny and witty jokes about generative AI"
 
@@ -17,5 +19,3 @@ const generateContent = async (req, res) => {
     res.send("Unexpected Error!!!")
   }
 }
-
-module.exports = generateContent;

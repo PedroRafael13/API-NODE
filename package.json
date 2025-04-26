@@ -2,7 +2,7 @@
   "name": "api-node",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "Project for study of nodeJs",
   "dependencies": {
+    "@google/genai": "^0.10.0",
     "@google/generative-ai": "^0.24.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0"
