@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 dotenv.config()
 
 const genIA = new GoogleGenerativeAI(process.env.API_KEY)
-const model = genIA.getGenerativeModel({ model: "gemini-1.5-fhash" })
+const model = genIA.getGenerativeModel({ model: "gemini-pro" })
 
 export const generateContent = async (req, res) => {
   try {
@@ -12,7 +12,7 @@ export const generateContent = async (req, res) => {
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text()
+    const text = response.text
     res.send(text)
   } catch (err) {
     console.log(err);
